@@ -69,6 +69,7 @@ add_library(OrderedCollections
   "OrderedSet/OrderedSet+UnstableInternals.swift"
   "OrderedSet/OrderedSet.swift"
   "Utilities/_UnsafeBitSet.swift"
+  "TreeArray/TreeArray.swift"
   )
 target_link_libraries(OrderedCollections PRIVATE
   _CollectionsUtilities)
