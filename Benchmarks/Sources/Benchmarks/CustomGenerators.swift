@@ -66,5 +66,13 @@ extension Benchmark {
       let items = (0 ..< size).map { Large($0) }
       return (items.shuffled(), items.shuffled())
     }
+      
+    self.registerInputGenerator(for: TreeArray<Int>.self) { size in
+        TreeArray(Array(0 ..< size).shuffled())
+    }
+      
+      self.registerInputGenerator(for: (TreeArray<Int>, [Int]).self) { size in
+          (TreeArray(Array(0 ..< size).shuffled()), Array(0 ..< size).shuffled())
+      }
   }
 }

@@ -27,6 +27,7 @@ if Deque<Int>._isConsistencyCheckingEnabled {
 var benchmark = Benchmark(title: "Collection Benchmarks")
 benchmark.registerCustomGenerators()
 benchmark.addArrayBenchmarks()
+benchmark.addTreeArrayBenchmarks()
 benchmark.addSetBenchmarks()
 benchmark.addDictionaryBenchmarks()
 benchmark.addTreeDictionaryBenchmarks()

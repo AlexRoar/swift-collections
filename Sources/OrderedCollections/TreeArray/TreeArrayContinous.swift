@@ -13,7 +13,7 @@ import Foundation
 @frozen
 public struct TreeArrayContinous<T>: Collection, Sequence,
   RangeReplaceableCollection, MutableCollection,
-  ExpressibleByArrayLiteral
+  ExpressibleByArrayLiteral, BidirectionalCollection, RandomAccessCollection
 {
   public typealias Element = T
 
@@ -325,6 +325,12 @@ public struct TreeArrayContinous<T>: Collection, Sequence,
   @inline(__always)
   public func index(after i: Int) -> Int {
     i + 1
+  }
+
+  @inlinable
+  @inline(__always)
+  public func index(before i: Int) -> Int {
+    i - 1
   }
 
   @inlinable
